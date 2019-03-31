@@ -2,16 +2,15 @@ const express = require("express");
 const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io").listen(server);
-const cors = require("cors");
 const players = {};
 let isRed = false;
+
 app.use(express.static(__dirname + "/public"));
-app.use(cors());
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-server.listen(80, function() {
+server.listen(8081, function() {
   console.log(`Listening on ${server.address().port}`);
 });
 

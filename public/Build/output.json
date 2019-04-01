@@ -1,6 +1,6 @@
 {
 "companyName": "UP78Labs",
-"productName": "Asteroids",
+"productName": "Space Fighters",
 "dataUrl": "output.data.unityweb",
 "wasmCodeUrl": "output.wasm.code.unityweb",
 "wasmFrameworkUrl": "output.wasm.framework.unityweb",

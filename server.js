@@ -39,11 +39,18 @@ io.on("connection", function(socket) {
   });
 
   socket.on("playerMovement", movementData => {
-    movementData = JSON.parse(movementData);
-    players[socket.id].x = movementData.x;
-    players[socket.id].y = movementData.y;
-    players[socket.id].rotation = movementData.rotation;
-    socket.broadcast.emit("playerMovement", JSON.stringify(players[socket.id]));
+    try {
+      movementData = JSON.parse(movementData);
+      players[socket.id].x = movementData.x;
+      players[socket.id].y = movementData.y;
+      players[socket.id].rotation = movementData.rotation;
+      socket.broadcast.emit(
+        "playerMovement",
+        JSON.stringify(players[socket.id])
+      );
+    } catch (error) {
+      console.log(error);
+    }
   });
 
   socket.on("fire", data => {

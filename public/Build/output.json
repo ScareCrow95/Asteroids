@@ -1,9 +1,9 @@
 {
 "companyName": "UP78Labs",
 "productName": "Space Fighters",
-"dataUrl": "Output.data.unityweb",
-"wasmCodeUrl": "Output.wasm.code.unityweb",
-"wasmFrameworkUrl": "Output.wasm.framework.unityweb",
+"dataUrl": "output.data.unityweb",
+"wasmCodeUrl": "output.wasm.code.unityweb",
+"wasmFrameworkUrl": "output.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},

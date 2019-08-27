@@ -13,7 +13,7 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-server.listen(8084, function () {
+server.listen(80, function () {
   console.log(`Listening on ${server.address().port}`);
   var rand = Math.round(Math.random() * 10000) + 4000;
   //console.log(rand);

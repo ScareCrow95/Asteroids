@@ -9,11 +9,11 @@ const collectibles = {};
 const powerUps = ["scope", "fastFire", "burstFire", "turbo"];
 let isPickupRunning = false;
 app.use(express.static(__dirname + "/public"));
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-server.listen(8084, function() {
+server.listen(80, function () {
   console.log(`Listening on ${server.address().port}`);
   var rand = Math.round(Math.random() * 10000) + 4000;
   //console.log(rand);
@@ -21,7 +21,7 @@ server.listen(8084, function() {
   setTimeout(spawnItems, rand);
 });
 
-io.on("connection", function(socket) {
+io.on("connection", function (socket) {
   //console.log("a user connected");
 
   socket.on("playerName", playername => {
@@ -42,7 +42,7 @@ io.on("connection", function(socket) {
     }
   });
 
-  socket.on("disconnect", function() {
+  socket.on("disconnect", function () {
     //console.log("user disconnected");
     delete players[socket.id];
     io.emit("playerDisconnect", socket.id);
